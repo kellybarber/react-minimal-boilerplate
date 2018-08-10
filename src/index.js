@@ -1,17 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-ReactDOM.render(
-  <div>React Boilerplate</div>, 
-  document.getElementById('app')
+const app = (
+  <div>React Boilerplate</div>
 )
 
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-
-// const title = 'My Minimal React Webpack Babel Setup';
-
-// ReactDOM.render(
-//   <div>{title}</div>,
-//   document.getElementById('app')
-// );
+ReactDOM.render(app, document.getElementById('app'))

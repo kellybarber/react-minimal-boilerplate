@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   entry: './src/index.js',
   module: {
@@ -7,11 +9,12 @@ module.exports = {
   },
   resolve: { extensions: [ '*', '.js', 'css', 'scss' ] },
   output: {
-    path: __dirname + '/dist',
-    publicPath: '/',
+    path: path.join(__dirname, 'public', 'dist'),
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: path.join(__dirname, 'public'),
+    publicPath: '/dist/',
+    port: 3001
   }
 };
